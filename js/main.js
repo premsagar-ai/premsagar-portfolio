@@ -219,10 +219,10 @@ staggerGroups.forEach(selector => {
 /* --------- TYPED EFFECT FOR HERO TITLE --------- */
 (function typeTitle() {
   const titles = [
-    'Customer Success Manager',
+    'Growth Strategy Manager',
+    'Performance Marketing Manager',
     'Amazon PPC Specialist',
-    'Amazon DSP Expert',
-    'Digital Marketing Strategist'
+    'Amazon DSP Expert'
   ];
 
   const el = document.querySelector('.hero-title');
