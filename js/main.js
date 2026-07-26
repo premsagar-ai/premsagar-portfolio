@@ -122,11 +122,16 @@ let statsAnimated = false;
 const statsObserver = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting && !statsAnimated) {
     statsAnimated = true;
-    const targets  = [5, 90, 20];
+    const targets  = [5, null, 15];
     const prefixes = ['', '$', ''];
     const suffixes = ['+', 'K', '+'];
+    const statics  = [null, '$150K–200K', null];
 
     heroStats.forEach((el, i) => {
+      if (targets[i] === null) {
+        setTimeout(() => { el.textContent = statics[i]; }, i * 200);
+        return;
+      }
       setTimeout(() => {
         const target = targets[i];
         const prefix = prefixes[i];
